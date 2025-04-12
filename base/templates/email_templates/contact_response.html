@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+
+  <!-- ✅ Official Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/2b63157655.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #0f0e0e;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      background: #f5f5f5;
+    }
+
+    .header {
+      margin: 10px;
+      padding: 80px 20px;
+      text-align: center;
+      border: 1px solid black;
+      background: linear-gradient(130deg, rgb(207, 211, 214), rgb(12, 163, 201), rgb(72, 143, 213));
+      color: rgb(6, 0, 0);
+      border-radius: 10px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .container,
+    .regards {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .container h2 {
+      text-align: left;
+      padding-bottom: 10px;
+      font-size: 26px;
+    }
+
+    .container p,
+    .regards {
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .regards {
+      font-size: 18px;
+      padding: 10px 30px;
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .footer a {
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .footer i {
+      font-size: 24px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover i {
+      color: #00acee;
+    }
+
+    .test-icons {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 30px;
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header fade-in">
+    <h1>Thank You for Reaching Out!</h1>
+  </div>
+
+  <div class="container fade-in">
+    <h2>Hello {{ name }},</h2>
+    <p>
+      Thanks a lot for reaching out through my portfolio! I really appreciate your interest. I’ve got your message and I’ll get back to you as soon as I can. Meanwhile, feel free to check out more of my work or connect with me on my
+      <a href="https://uppunuti-siddhartha.vercel.app/contact.html">social media.</a>
+    </p>
+  </div>
+
+  <div class="regards fade-in">
+    <p>
+      Regards,<br>
+      <strong>Uppunuti Siddhartha</strong><br>
+      <em>Python Full Stack Developer</em>
+    </p>
+  </div>
+
+
+  <div class="test-icons">
+    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-github"></i>
+    <i class="fas fa-file-alt"></i>
+    <i class="fas fa-link"></i>
+  </div>
+
+  <div class="footer fade-in">
+    <p>
+      <a href="https://www.linkedin.com/in/siddharthass" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/uppunutisiddhartha" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://drive.google.com/file/d/1tLOD7byCGHGbB0azTgX3yuyD6wHo8FS_/view?usp=sharing" target="_blank">
+        <i class="fas fa-file-alt"></i>
+      </a>
+      <a href="https://uppunuti-siddhartha.vercel.app/contact.html" target="_blank">
+        <i class="fas fa-link"></i>
+      </a>
+    </p>
+    <p>You received this message because you contacted me via <a href="https://siddhartha-portifolio.vercel.app/" style="color:#00acee;">my portfolio</a>.</p>
+    <p>&copy; 2025 Uppunuti Siddhartha — All rights reserved.</p>
+  </div>
+</body>
+
+</html>
