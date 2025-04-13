@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1i@n2-+^nh&2wt%o2&8xk@zku#r3p&vojn!#%5hinu)sc3$q!a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['base.onrender.com', 'localhost', '127.0.0.1']
+DEBUG = True
 
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -116,9 +116,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-STATIC_URL = '/static/'
 
-
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'base/static'),
 ]
@@ -135,5 +134,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'uppunutisiddhartha@gmail.com'  
 EMAIL_HOST_PASSWORD = 'xsux yxco xngq bcsu' 
-
-
