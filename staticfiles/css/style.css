@@ -982,6 +982,138 @@ text-align: center;
   #highlights .para p {
     font-size: 14px; 
   }
+  @media (max-width: 400px) {
+    /* Navigation adjustments */
+    nav ul {
+      margin: 10px 5px;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    
+    nav ul li a {
+      margin: 0 8px;
+      font-size: 14px;
+    }
+    
+    /* Home section adjustments */
+    .home {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .img-container img {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto 20px;
+    }
+    
+    .home .main {
+      width: 100%;
+      padding: 0 15px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .home .main h2 {
+      font-size: 24px;
+    }
+    
+    .home .main p {
+      font-size: 14px;
+    }
+    
+    .social a {
+      font-size: 20px;
+    }
+    
+    /* About section adjustments */
+    #About1 h1 {
+      font-size: 40px;
+      margin-left: 15px;
+    }
+    
+    .row p {
+      font-size: 16px;
+      padding: 0 15px;
+    }
+    
+    /* Skills section adjustments */
+    .skill {
+      font-size: 40px;
+    }
+    
+    .badge {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    
+    .badge i {
+      font-size: 18px;
+    }
+    
+    /* Projects section adjustments */
+    #project h1 {
+      font-size: 40px;
+      margin-left: 15px;
+    }
+    
+    .project-title {
+      margin-left: 15px;
+      font-size: 18px;
+    }
+    
+    .project-desc {
+      margin-left: 15px;
+      padding-right: 15px;
+    }
+    
+    /* Highlights section adjustments */
+    #highlights h1 {
+      font-size: 40px;
+      margin-left: 15px;
+    }
+    
+    #highlights .col-md-5,
+    #highlights .col-md-7 {
+      max-width: 100%;
+    }
+    
+    #highlights .cer {
+      padding: 10px;
+    }
+    
+    .expo h4 {
+      font-size: 28px;
+    }
+    
+    .expo h5 {
+      font-size: 18px;
+    }
+    
+    /* Contact section adjustments */
+    #contact h1 {
+      font-size: 40px;
+    }
+    
+    .contact-info {
+      margin-left: 15px;
+    }
+    
+    .contact-form {
+      margin: 15px;
+      padding: 15px;
+    }
+    
+    /* Footer adjustments */
+    footer {
+      padding: 15px;
+    }
+    
+    .footer-links {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
 }
   
 }
