@@ -292,8 +292,8 @@ font-size: 22px;
 
 .badge:hover {
   background-color: #bfbfc5;
-  transform: scale(1.1) rotate(10deg);
-  cursor: pointer;
+  transform:scale(1.1)rotate(10deg);
+  
 }
 
 .project-title {
