@@ -20,6 +20,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <style>
+ html{
+  scroll-behavior: auto;
+ }
  * {
   margin: 0;
   padding: 0;
@@ -52,12 +55,15 @@ nav ul {
   background-color: rgba(15, 32, 39, 0.9);
   padding: 10px;
 }
-
+nav ul li {
+  position: relative; 
+  margin: 5px;
+}
 nav ul li a {
   margin: 0 15px;
   cursor: pointer;
   font-weight: bold;
-  color: #f3f3f3;
+  color: #f5ecec;
   transition: color 0.3s ease;
 }
 
@@ -65,25 +71,27 @@ nav ul li a:hover {
   color: #555;
   text-decoration: none;
 }
-nav ul li::after{
+nav ul li::after {
   content: '';
-  width: 20%;
-  height: 3px;
-  background-color: #1d5233;
   position: absolute;
-  left: 10px;
-  bottom: -6px;
-  transition: 0.5s;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 50%;
+  height: 3px;
+  background-color: #fbfffd;
+  transition: transform 0.3s ease;
 }
 
-nav ul li:hover::after{
-  width:50%;
+nav ul li:hover::after {
+  transform: translateX(-50%) scaleX(1);
 }
 .img-container img {
   width: 480px;
   height: 480px;
   border-radius: 50%;
- margin-left: 205px;
+ margin-left: 255px;
   object-fit: cover;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border: solid #2c5364 1px;
@@ -98,12 +106,15 @@ nav ul li:hover::after{
 font-weight: normal; 
 }
 .home .main{
-  margin-top: 50px;
-  margin-left: 10px;
+  margin-top: 60px;
+  margin-left: 30px;
   width: 750px;
 }
 .home h2 span {
   color:  #00b4d8;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .social {
   margin-top: 20px;
@@ -281,12 +292,12 @@ font-weight: normal;
   transition: all 0.3 ease;
   margin-top:100px;
   animation: popIn 0.8s ease forwards;
+  margin-top: 3px;
+  transition: all 0.3s ease; 
+  transform: translateY(0);
 }
 .main-container{
   margin-top: 50px;
-}
-.badge {
-  margin-top: 3px;
 }
 .badge i {
 font-size: 22px;
@@ -314,7 +325,7 @@ font-size: 22px;
 
 .badge:hover {
   background-color: #bfbfc5;
-  transform:scale(1.1)rotate(10deg);
+  transform: scale(1.1) rotate(10deg);
   
 }
 
@@ -812,6 +823,7 @@ footer p{
   
   .social a {
     font-size: 1.2rem;
+    margin-bottom:0px;
   }
   
   .btn-primary {
@@ -819,16 +831,17 @@ footer p{
     font-size: 0.9rem;
   }
   #About1 h1 {
-    font-size: 90px;
+    font-size: 85px;
     text-align: left;
-    margin-left: 0;
+  
+    text-align: center;
   }
   #About1{
     margin-top: -30px;
   }
   #project h1 {
-   margin-left:-10px;
-    font-size:50px;
+   margin-left:0px;
+    font-size:20px;
     text-align: left;
     display: flex;
   }
@@ -1149,6 +1162,9 @@ text-align: center;
 </style><div class="section">
     <body>
         <nav>
+          <div class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Hamburger Icon -->
+          </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
@@ -1540,7 +1556,7 @@ text-align: center;
 
         <div class="footer-links">
             <a href="mailto:uppunutisiddhartha@gmail.com" class="footer-link">
-                <i class="fas fa-envelope"></i>Email
+                <i class="fas fa-envelope"></i> Email
             </a>
             <a href="https://github.com/uppunutisiddhartha" target="_blank" class="footer-link">
                 <i class="fab fa-github"></i>GitHub
@@ -1548,7 +1564,7 @@ text-align: center;
             <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank" class="footer-link">
                 <i class="fab fa-linkedin"></i>LinkedIn
             </a>
-            <a href="contact.html" target="_blank" class="footer-link">
+            <a href="https://siddhartha-portifolio.vercel.app/contact.html" target="_blank" class="footer-link">
                 <i class="fa-solid fa-link"></i>Contact
             </a>
         </div>
