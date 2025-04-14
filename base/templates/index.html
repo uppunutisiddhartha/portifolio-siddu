@@ -755,8 +755,8 @@ footer p{
   }
 
   .home img {
-    height: 230px;
-    width: 230px;
+    height: 200px;
+    width: 200px;
   }
 
   .home .btn {
@@ -795,9 +795,9 @@ footer p{
   
   .main{
     text-align:left;
-    width:100%;
+    max-width: 350px;
     margin-right:0px;
-    margin-top:20px;
+    margin-top:10px;
     text-align: center;
   }
   .main h2,h3 {
@@ -815,25 +815,26 @@ footer p{
   .img-container {
     width: 280px;
     height: 250px;
-    padding-top:10px;
-    margin-left:-160px;
+    padding-top:30px;
+    margin-left:-120px;
     margin-bottom: -100px;
     margin-top: -50px;
   }
   
   .social a {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin-bottom:0px;
   }
   
   .btn-primary {
     padding: 8px 16px;
     font-size: 0.9rem;
-    max-width: 220px;
   }
   #About1 h1 {
     font-size: 85px;
     text-align: left;
+  
+    text-align: center;
   }
   #About1{
     margin-top: -30px;
@@ -990,24 +991,19 @@ text-align: center;
  }
  
 
-}
+
 @media (max-width: 768px) {
   #highlights .explore .row {
     flex-direction: column; 
   }
-.main{
-  margin-top: -40px;
-  margin-bottom: 100px;
-}
+
   #highlights .col-md-5,
   #highlights .col-md-7 {
     max-width: 100%; 
     margin-top: -50px;
     padding-top: -20px;
   }
-#about h1{
-  text-align: left;
-}
+
   #highlights .cer {
     padding: 10px; 
     margin-bottom:-5px; 
@@ -1024,7 +1020,6 @@ text-align: center;
   #highlights .para p {
     font-size: 14px; 
   }
-  }
   @media (max-width: 400px) {
     /* Navigation adjustments */
     nav ul {
@@ -1038,24 +1033,24 @@ text-align: center;
       font-size: 14px;
     }
     
-
+    /* Home section adjustments */
     .home {
       flex-direction: column;
       align-items: center;
     }
     
     .img-container img {
-      width: 220px;
-      height: 220px;
+      width: 250px;
+      height: 250px;
       margin: 0 auto 50px;
-      margin-top: -50px;
-      margin-left:290px;
+      margin-top: -110px;
+      margin-left:220px;
     }
     
     .home .main {
       width: 100%;
       padding: 0 15px;
-      margin-top: 45px;
+      margin-top: 35px;
       margin-left: 50px;
       text-align:center;
       justify-content: center;
@@ -1070,14 +1065,13 @@ text-align: center;
     }
     
     .social a {
-      font-size: 30px;
+      font-size: 20px;
     }
     
-   
+    /* About section adjustments */
     #About1 h1 {
       font-size: 80px;
-      margin-left:0px;
-      text-align: left;
+      margin-left: 15px;
     }
     
     .row p {
@@ -1085,7 +1079,7 @@ text-align: center;
       padding: 0 15px;
     }
     
-  
+    /* Skills section adjustments */
     .skill {
       font-size: 50px;
     }
@@ -1138,7 +1132,7 @@ text-align: center;
       font-size: 18px;
     }
     
-   
+    /* Contact section adjustments */
     #contact h1 {
       font-size: 40px;
     }
@@ -1164,11 +1158,13 @@ text-align: center;
   }
 }
   
-  
+}  
 </style><div class="section">
     <body>
         <nav>
-          
+          <div class="menu-toggle" id="menu-toggle">
+            ☰ <!-- Hamburger Icon -->
+          </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
