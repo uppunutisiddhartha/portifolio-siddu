@@ -3,1699 +3,551 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uppunuti-siddhartha</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/ab66a4ccff.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?v=123">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>uppunuti-siddhartha</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/ab66a4ccff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?v=123">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <style>
- html{
-  scroll-behavior: auto;
- }
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.section {
-  background: linear-gradient(#0f2027, #1b3139);
-  min-height: 100vh;
-  padding-top: 100px;
-}
 
-nav {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 20px 40px;
-  border: solid 2px #444;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(15, 32, 39, 0.9);
-  padding: 10px;
-}
-nav ul li {
-  position: relative; 
-  margin: 5px;
-}
-nav ul li a {
-  margin: 0 15px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #f5ecec;
-  transition: color 0.3s ease;
-}
 
-nav ul li a:hover {
-  color: #555;
-  text-decoration: none;
-}
-nav ul li::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 50%;
-  height: 3px;
-  background-color: #fbfffd;
-  transition: transform 0.3s ease;
-}
-
-nav ul li:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
-.img-container img {
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
- margin-left: 255px;
-  object-fit: cover;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border: solid #2c5364 1px;
-  padding: 3px;
-  margin-top: -30px;
-}
-.home{
-  display: flex;
-  
-}
-.home .main p{
-font-weight: normal; 
-}
-.home .main{
-  margin-top: 60px;
-  margin-left: 30px;
-  width: 750px;
-}
-.home h2 span {
-  color:  #00b4d8;
-  font-weight: bold;
-  font-size: 35px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.social {
-  margin-top: 20px;
-}
-
-.social a {
-  display: inline-block;
-  margin:5px;
-  font-size: 24px;
-  color: #00b4d8;
-  transition: color 0.3s ease;
-}
-
-.social a:hover {
-  color: #2c5364; 
-}
-
-.home .main .btn{
-  background-color: #00b4d8;
-  color: #0f2027;
-  width: 200px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-.home .main .btn:hover{
-  background-color: #2c5364;
-  transform: scale(1.05);
-  color: #e9ecef;
-}
-.home p a {
-  margin-top: 150px;
-  text-align: center;
-  border: solid 1px #777;
-  background-color: rgba(120, 119, 117, 0.8);
-  margin: 10px auto;
-  padding: 5px;
-  border-radius: 50px;
-  color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  max-width: 200px;
-}
-
-.home p a:hover {
-  color: rgb(232, 231, 236);
-  text-decoration: none;
-}
-
-
-#about {
-  background-color: #203a43;
-  padding: 50px 0;
-}
-
-
-#About1 h1 {
-  font-size: 75px;
-  color: #f3f3f3;
-  margin: 0;
-  padding: 0;
-  margin-top: 30px;
-  margin-left: 50px;
-  position: sticky;
-  top: 0;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.row {
-  margin: 0;
-  padding: 0;
-}
-
-.row p {
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 20px;
-  margin-top: -10px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  font-size: 30px;
-  color: white;
-  font-weight: bold;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: transform, opacity;
-}
-
-.certificate .num {
-  display: flex;
-  justify-content: center;
-}
-
-.certificate:not(:last-child) {
-  border-right: 3px solid rgb(230, 220, 220);
-  padding-right: 120px;
-}
-
-#project {
-  background: linear-gradient(#1d1c1c, #474a4e);
-  min-height: 100vh;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#project h1 {
-  color: #e9ecef;
-  margin-left: 130px;
-  text-align: left;
-  margin-top: 50px;
-  font-size: 70px;
-  text-decoration: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-#project h1 span {
-  color: #00b4d8;
-}
-
-.main-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}.badge-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  max-width: 900px;
-}
-.skill{
-  text-align: center ;
-  margin-top: 50px;
-  color: #e9ecef;
-  font-size: 80px;
-}
-.skill:hover{}
-.skill span{
-  color: #00b4d8;
-}
-.col-md-5{
-  margin-top: 50px;
-}
-.col-md-5 p{
-  color: rgb(150, 142, 142);
-  margin-left:50px;
-}
-.col-md-5 strong{
-  color: #cacfd1;
-}
-.badge {
-  display: flex;
-  opacity: 0;
-    transform: translateY(10px);
-    display: inline-block;
-  align-items: center;
-  background-color: white;
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
-  font-weight: bold;
-  font-size: 15px;
-  color: #374151;
-  transition: 0.3s;
-  transition: all 0.3 ease;
-  margin-top:100px;
-  animation: popIn 0.8s ease forwards;
-  margin-top: 3px;
-  transition: all 0.3s ease; 
-  transform: translateY(0);
-}
-.main-container{
-  margin-top: 50px;
-}
-.badge i {
-font-size: 22px;
-}
-.python { color: #3776AB; }
-.django { color: #092E20; }
-.restapi { color: #E34F26; }
-.html { color: #E44D26; }
-.css { color: #264DE4; }
-.js { color: #F7DF1E; }
-.react { color: #61DBFB; }
-.git { color: #F05032; }
-.github { color: #181717; }
-.postgres { color: #336791; }
-.mysql { color: #00758F; }
-.sqlite { color: #003B57; }
-.docker { color: #0db7ed; }
-.vercel { color: black; }
-.heroku { color: #430098; }
-.aws { color: #FF9900; }
-.linux { color: #FCC624; }
-.bootstrap { color: #7952B3; }
-.tailwind { color: #38B2AC; }
-.api { color: #4A5568; }
-
-.badge:hover {
-  background-color: #bfbfc5;
-  transform: scale(1.1) rotate(10deg);
-  
-}
-
-.project-title {
-  cursor: pointer;
-  color: #e9ecef;
-  margin: 15px 0;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-left: 130px;
-  text-align: left;
-  transition: all color 5s;
-}
-
-.project-title:hover {
-  color: #00b4d8;
-}
-
-.project-title:after {
-  color: rgb(56, 28, 167);
-}
-
-#projectmain {
-  margin: 100px;
-}
-
-.project-desc {
-  display: none;
-  margin: 10px 0;
-  margin-left: 130px;
-  border-top: 4px solid #2c5364; 
-  border-radius: 5px;
-}
-
-.project-desc p {
-  color: #adb5bd;
-  white-space: normal;
-  word-break: normal;
-  width: auto;
-  max-width: 100%;
-  line-height: 1.5;
-  text-align: justify;
-}
-#project{
-  background: linear-gradient(#0f2027, #152a35);
-}
-.project-desc h6 {
-  color: rgb(182, 176, 176);
-  margin-top: 20px;
-  font-size: 22px;
-  text-align: left;
-}
-
-.project-desc h6 span {
-  color: #00b4d8;
-}
-
-.icons {
-  display: flex;
-  justify-content: left;
-  align-items: last baseline;
-}
-
-.icons i {
-  font-size: 28px;
-  color: rgb(146, 135, 135);
-  border: solid black 1px;
-  border-radius: 20%;
-  padding: 5px;
-  margin-right: 15px;
-  background-color: rgb(39, 38, 38);
-  transform: all ease 10s;
-}
-
-.icons i:hover {
-  transform: scale(1.03);
-  color: black;
-}
-
-#project-img {
-  width: 100%;
-  max-width: 600px;
-  max-height: 350px;
-  margin-top: 120px;
-  display: none;
-  border-radius: 10px;
-}
-
-#project .btn {
-  display: inline-block;
-  margin: 20px auto;
-  background-color: #2c5364;
-  color: #e9ecef;
-  font-weight: bold;
-  max-width: 400px;
-  border-radius: 50px;
-  width: 180px;
-  height: 40px;
-  margin-top: -5px;
-  transition: all 0.3s ease;
-}
-
-#project .btn:hover {
-  background-color: rgb(128, 122, 122);
-  transform: scale(1.05);
-}
-
-#project {
-  text-align: center;
-}
-
-#highlights {
-  background-color:  #0f2027;
-  min-height: 80vh;
-  padding: 50px 0;
-}
-
-#highlights h1 {
-  color: white;
-  margin-top: 50px;
-  margin-left: 100px;
-  font-size: 70px;
-  position: relative;
-  position: sticky;
-  top: 0px;
-}
-
-#highlights h1 span {
-  color: rgb(22, 22, 230);
-}
-
-#highlights p {
-  color: rgb(133, 132, 132);
- position: sticky;
-  margin-left: 100px;
-  top: 60px;
- 
-  margin-top: 1px;
-  transition: color 0.9s ease;
-}
-
-#highlights p:hover {
-  color: white;
-}
-
-.col-md-7 {
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: -10px;
-  margin-top: 30px;
-}
-
-.cer {
-  flex: 0 0 calc(50% - 20px);
-  background-color: transparent;
-  padding: 15px;
-  box-sizing: border-box;
-  border-radius: 10px;
- margin-bottom:-30px;
-}
-
-.expo h4 {
-  margin: 0;
-  color: white;
-  font-size: 54px;
-}
-
-.expo h4 span {
-  color: red;
-}
-
-.expo h5 {
-  margin: 5px 0 10px;
-  font-size: 28px;
-  color: rgb(23, 23, 232);
-  font-weight: bold;
-  transition: all 1s ease
-}
-.expo h5:hover{
-  color: #e9ecef;
-}
-.expo  a:hover{
-  text-decoration: none;
-}
-#highlights .cer .para p {
-  color: #9f9999;
-  font-size: 15px;
-  line-height: 1.6;
-  margin-top: -10px;
-  margin-left: 0px;
-}
-
-#highlights .cer .para p:hover {
-  color: rgb(234, 222, 222);
-}
-#contact{
-  background: linear-gradient(#0f2027, #203a43);
-  min-height: 100vh;
-  
-}
-#contact h1{
-  text-align: center;
-  font-size: 60px;
-  font-weight: bold;
-  color: white;
- padding-top: 10px;
-}
-#contact h1 span{
-  color: #00b4d8;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.contact-info{
-  margin-left: 100px;
-  margin-top: 50px;
-  margin-right: 0px;
-}
-.contact-info i{
-  padding: 5px;
-  color:white;
-  transition: all 1s ease;
-}
-
-.social-icons i:hover{
-  margin-right:0px;
-  font-size: 30px;
-  color: rgb(218, 26, 26);
-  transition: all 0.5s ease;
-}
-.contact-info p a{
-  color:white;
-  transition: all 1s ease;
-}
-.contact-info p:hover{
-  color: blue;
-  text-decoration: none;
-}
- .contact-info p a:hover{
-  color: blue;
-  text-decoration: none;
- } 
-.social-icons i:hover{
-  color: #444;
-  transform: scale(1.3);
-}
-.contact-info h3{
-  color: white;
-  font-size:45px;
-}
-.contact-info h6{
-  color: rgb(104, 100, 100);
-  padding: 5px;
-}
-.form-group label{
-  color: rgb(159, 153, 153);
-  font-weight: bold;
-}
-
-.contact-form{
-  margin-right: 30px;
-  border: #a9a7a7 solid 3px;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(#0f2027, #203a43);
-}
-.contact-form .btn{
-  
-  font-weight: bold;
-  background-color: #00b4d8;
-  color: #0f2027;
-  width: 235px;
-
-}
-footer{
-  background-color: #0f2027;
-  border-top: solid #6d435a 2px;
- padding: 20px;
- border-radius: 5px;
-}
-footer h3{
-  text-align: center;
-  color: white;
-}
-footer p{
-  text-align: center;
-  color: white;
-}
-.footer-links {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  gap: 10px;
-  color:#e9ecef; 
-}
-
-.footer-link {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #606463;
-  text-decoration: none;
-}
-
-.footer-link i {
-  margin-right: 8px; 
-}
-
-
-
-@media (max-width: 1200px) {
-  .home h1 {
-    font-size: 35px;
-  }
-
-  .home h7 {
-    font-size: 18px;
-  }
-
-  #About1 h1 {
-    font-size: 60px;
-  }
-
-  #project h1 {
-    font-size: 60px;
-  }
-
-  .project-title {
-    font-size: 22px;
-  }
-
-  .project-desc h6 {
-    font-size: 20px;
-  }
-
-  .expo h4 {
-    font-size: 48px;
-   
-  }
-
-  .expo h5 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 992px) {
-  .home h1 {
-    font-size: 30px;
-  }
-
-  .home h7 {
-    font-size: 16px;
-  }
-
-  #About1 h1 {
-    font-size: 50px;
-  }
-
-  #project h1 {
-    font-size: 50px;
-  }
-
-  .project-title {
-    font-size: 20px;
-  }
-
-  .project-desc h6 {
-    font-size: 18px;
-  }
-
-  .expo h4 {
-    font-size: 42px;
-  }
-
-  .expo h5 {
-    font-size: 20px;
-  }
-
-  .col-md-7 {
-    flex-direction: column;
-  }
-
-  .cer {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home h1 {
-    font-size: 25px;
-  }
-
-  .home h7 {
-    font-size: 14px;
-  }
-.main{
-  margin-top: -100px;
-}
-  #About1 h1 {
-    font-size: 40px;
-    text-align: left;
-  }
-
-  #project h1 {
-    font-size: 40px;
-  }
-
-  .project-title {
-    font-size: 18px;
-  }
-
-  .project-desc h6 {
-    font-size: 16px;
-  }
-
-  .expo h4 {
-    font-size: 36px;
-  }
-
-  .expo h5 {
-    font-size: 18px;
-  }
-
-  .home img {
-    height: 200px;
-    width: 200px;
-  }
-
-  .home .btn {
-    width: 120px;
-    font-size: 14px;
-  }
-
-  .home .social-icons ul li i {
-    font-size: 20px;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .certificate:not(:last-child) {
-    border-right: none;
-    padding-right: 0;
-    border-bottom: 3px solid rgb(230, 220, 220);
-    padding-bottom: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .home .row {
-   margin-left: -65px;
-  }
-  .main h3 {
-    font-size: 1.5rem;
-  }
-  nav{
-    background: linear-gradient(#0f2027, #1b3139);
-    
-  }
-  
-  .main{
-    text-align:left;
-    max-width: 350px;
-    margin-right:0px;
-    margin-top:30px;
-    text-align: center;
-  }
-  .main h2,h3 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-.home{
-  height: 70vh;
-}
-  .main p {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-  
-  .img-container {
-    width: 280px;
-    height: 250px;
-    padding-top:30px;
-    margin-left:-120px;
-    margin-bottom: -100px;
-    margin-top: -50px;
-  }
-  
-  .social a {
-    font-size: 1.7rem;
-    margin-bottom:0px;
-  }
-  
-  .btn-primary {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-  #About1 h1 {
-    font-size: 85px;
-    text-align: left;
-  
-    text-align: center;
-  }
-  #About1{
-    margin-top: -30px;
-    text-align: left;
-  }
-  #project h1 {
-   margin-left:0px;
-    font-size:20px;
-    text-align: left;
-    display: flex;
-  }
-
-  .project-title {
-    font-size: 16px;
-  }
-
-  .project-desc h6 {
-    font-size: 14px;
-  }
-
-  .expo h4 {
-    font-size: 30px;
-  }
-
-  .expo h5 {
-    font-size: 16px;
-  }
-
- 
-
-  .project-title,
-  .project-desc {
-    margin-left: 20px;
-  }
-  .project-desc  p{
-    word-spacing:-4px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .skill{
-    margin: 0px;
-   font-size: 50px;
-  }
-  #project-img {
-    width: 100%;
-    max-width: 450px;
-    max-height: 300px;
-    margin-top: 30px;
-  }
-  #project .btn{
-    margin-top: 50px;
-  }
-  #project h1{
-    font-size: 50px;
-  }
-  #highlights h1{
-   text-align: left;
-   margin-left: 0px;
-  }
-
-#highlights .explore .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; 
-}
-
-#highlights .col-md-5,
-#highlights .col-md-7 {
-  flex: 1;
-}
-#highlights .col-md-5 h1{
-  font-size: 60px;
-}
-#highlights .col-md-5 {
-  max-width: 40%; 
-}
-
-#highlights .col-md-7 {
-  max-width: 60%;
-  margin-top: -100px; 
-  padding-bottom: -100px;
-}
-.main-container{
-  margin-top: -15px;
-}
-#highlights .cer {
-  display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 5px; 
-}
-.col-md-5 p{
-  color: rgb(149, 143, 143);
-  margin: 1px;
-  text-align: justify;
-  word-spacing: -10px;
-}
-#highlights .expo h4 {
-  margin: 0;
-  color: white;
-  font-size: 54px;
-}
-
-#highlights .expo h5 {
-  margin: 5px 0 10px;
-  font-size: 28px;
-  color: rgb(53, 53, 152);
-  font-weight: bold;
-}
-#highlights .explore h1{
- font-size: 60px;
-  text-align:left;
-}
-#highlights .explore p{
-  margin-left: 0px;
-}
-#highlights .para p {
-  color: #9f9999;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 0;
-}
-#contact{
-  margin-top: 0px;
-}
-.contact-info{
-  margin: 0px;
-}
-.contact-form .btn{
-  width: 140px;
- text-align: right;
- align-items: end;
-}
-.contact-form{
- margin-left: 30px;
-  align-items: center;
- 
-}
-footer{
- padding-top:50px;
- background-color: #1d1c1c;
-
- }
- #section h3{
-color: white;
-text-align: center;
- }
- #section p{
-  color: white;
-text-align: center;
- }
- .skill span{
-  color: rgb(49, 49, 210);
- }
- 
-}
-
-@media (max-width: 768px) {
-  #highlights .explore .row {
-    flex-direction: column; 
-  }
-
-  #highlights .col-md-5,
-  #highlights .col-md-7 {
-    max-width: 100%; 
-    margin-top: -50px;
-    padding-top: -20px;
-  }
-
-  #highlights .cer {
-    padding: 10px; 
-    margin-bottom:-5px; 
-  }
-
-  #highlights .expo h4 {
-    font-size: 40px; 
-  }
-
-  #highlights .expo h5 {
-    font-size: 20px; 
-  }
-
-  #highlights .para p {
-    font-size: 14px; 
-  }
-  #about h1{
-    text-align: left;
-  }
-  .img-container img{
-    width: 250px;
-    height: 250px;
-    margin-left: 200px;
-  }
-}
-  @media (max-width: 400px) {
-    /* Navigation adjustments */
-    nav ul {
-      margin: 10px 5px;
-      padding: 5px;
-      border-radius: 10px;
-    }
-    
-    nav ul li a {
-      margin: 0 8px;
-      font-size: 14px;
-    }
-    
-    /* Home section adjustments */
-    .home {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .img-container img {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto 50px;
-      margin-top: -110px;
-      margin-left:220px;
-    }
-    
-    .home .main {
-      width: 100%;
-      padding: 0 15px;
-      margin-top: 35px;
-      margin-left: 50px;
-      text-align:center;
-      justify-content: center;
-    }
-    
-    .home .main h2 {
-      font-size: 24px;
-    }
-    
-    .home .main p {
-      font-size: 14px;
-    }
-    
-    .social a {
-      font-size: 30px;
-    }
-    
-    /* About section adjustments */
-    #About1 h1 {
-      font-size: 80px;
-      margin-left: 15px;
-    }
-    
-    .row p {
-      font-size: 16px;
-      padding: 0 15px;
-    }
-    
-    /* Skills section adjustments */
-    .skill {
-      font-size: 50px;
-    }
-    
-    .badge {
-      padding: 6px 10px;
-      font-size: 12px;
-    }
-    
-    .badge i {
-      font-size: 18px;
-    }
-    
-    /* Projects section adjustments */
-    #project h1 {
-      font-size: 50px;
-      margin-left:-10;
-    }
-    
-    .project-title {
-      margin-left: 15px;
-      font-size: 18px;
-    }
-    
-    .project-desc {
-      margin-left: 15px;
-      padding-right: 15px;
-    }
-    
-    /* Highlights section adjustments */
-    #highlights h1 {
-      font-size: 40px;
-      margin-left: 15px;
-    }
-    
-    #highlights .col-md-5,
-    #highlights .col-md-7 {
-      max-width: 100%;
-    }
-    
-    #highlights .cer {
-      padding: 10px;
-    }
-    
-    .expo h4 {
-      font-size: 28px;
-    }
-    
-    .expo h5 {
-      font-size: 18px;
-    }
-    
-    /* Contact section adjustments */
-    #contact h1 {
-      font-size: 40px;
-    }
-    
-    .contact-info {
-      margin-left: 15px;
-    }
-    
-    .contact-form {
-      margin: 15px;
-      padding: 15px;
-    }
-    
-    /* Footer adjustments */
-    footer {
-      padding: 15px;
-    }
-    
-    .footer-links {
-      flex-direction:row;
-      gap: 1px 15px;
-    }
-  }
-}
-  
-}  
-</style><div class="section">
-    <body>
-        <nav>
-          <div class="menu-toggle" id="menu-toggle">
-            ☰ <!-- Hamburger Icon -->
-          </div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#highlights">Explore</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="home">
-            <p id="open">#Open To Work</p>
-            <section id="home">
-                <div class="container">
-                    <div class="row">
-                        <!-- Content Column - order changes based on screen size -->
-                        <div class="col-lg-6 col-md-12 order-lg-1 order-2">
-                            <div class="main">
-                                <h5>Hello, it's ME</h5>
-                                <h3>Uppunuti Siddhartha</h3>
-                                <h2>And I'm a <span id="typing-text"></span></h2>
-                                <p>A passionate Python Full Stack Developer and Web Developer with expertise in building dynamic and user-friendly applications.</p>
-                                <div class="social">
-                                    <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                    <a href="https://github.com/your-username" target="_blank">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="mailto:your.email@examplezzzzzzzz.com">
-                                        <i class="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                                <a href="your-file.pdf" download class="btn btn-primary">
-                                    <i class="fas fa-download"></i> Download
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <!-- Image Column - order changes based on screen size -->
-                        <div class="col-lg-6 col-md-12 order-lg-2 order-1">
-                            <div class="img-container text-center">
-                                <img src="https://res.cloudinary.com/db4ayioxs/image/upload/v1744566548/uploads/1744566547772-IMG_20240323_002245_11zon%20%281%29.jpg.png" alt="Profile Picture" class="img-fluid profile-img">
-                            </div>
-                        </div>
-                    </div>
+</style>
+<div class="section">
+
+  <body>
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰ <!-- Hamburger Icon -->
+      </div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#highlights">Explore</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="home">
+      <p id="open">#Open To Work</p>
+      <section id="home">
+        <div class="container">
+          <div class="row">
+            <!-- Content Column - order changes based on screen size -->
+            <div class="col-lg-6 col-md-12 order-lg-1 order-2">
+              <div class="main">
+                <h5>Hello, it's ME</h5>
+                <h3>Uppunuti Siddhartha</h3>
+                <h2>And I'm a <span id="typing-text"></span></h2>
+                <p>A passionate Python Full Stack Developer and Web Developer with expertise in building dynamic and
+                  user-friendly applications.</p>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/your-username" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="mailto:your.email@examplezzzzzzzz.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
                 </div>
-            </section>
+                <a href="your-file.pdf" download class="btn btn-primary">
+                  <i class="fas fa-download"></i> Download
+                </a>
+              </div>
+            </div>
+
+            <!-- Image Column - order changes based on screen size -->
+            <div class="col-lg-6 col-md-12 order-lg-2 order-1">
+              <div class="img-container text-center">
+                <img
+                  src="https://res.cloudinary.com/db4ayioxs/image/upload/v1744566548/uploads/1744566547772-IMG_20240323_002245_11zon%20%281%29.jpg.png"
+                  alt="Profile Picture" class="img-fluid profile-img">
+              </div>
+            </div>
+          </div>
         </div>
-    </body>
+      </section>
+    </div>
+  </body>
 </div>
 <section id="about">
-    <div class="row">
-        <div id="About1" class="col-md-4">
-            <h1>About</h1>
+  <div class="row">
+    <div id="About1" class="col-md-4">
+      <h1>About</h1>
 
-        </div>
-        <div class="col-md-7">
-            <p>🎓I am Uppunuti Siddhartha, a dedicated Software Developer with a strong foundation in full-stack web
-                development. I hold a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering from
-                AVN Institute of Engineering and Technology (AVNIET). </p>
-            <p>🛠️ As a Python Full Stack Developer,: I specialize in building dynamic web applications using HTML, CSS,
-                JavaScript, Django, and SQL, combining responsive front-end design with robust back-end functionality
-                and efficient database management.</p>
-            <p>💼 I have successfully completed internships in Python Full Stack Development, focusing on technologies
-                like Django, HTML, CSS, React.js, and APIs. My key academic project, "Autism Detection Using Machine
-                Learning," demonstrates my interest in combining technology with real-world problem-solving.</p>
-            <p>🚀 In addition to my academic achievements, I actively enhance my skills through coding challenges on
-                platforms like LeetCode, and contribute to collaborative projects on GitHub. I’m passionate about
-                continuous learning, clean code, and building impactful digital solutions.
-            </p>
-        </div>
     </div>
-    <div class="container">
-        <div class="certificate">
-            <div class="num">
-                4+
-            </div>
-            <div class="title">
-                Certifications
-            </div>
-        </div>
-        <div class="certificate">
-            <div class="num">
-                7+
-            </div>
-            <div class="title">
-                Projects
-            </div>
-        </div>
-        <div class="certificate">
-            <div class="num">
-                2+
-            </div>
-            <div class="title">
-                Achievements
-            </div>
-        </div>
+    <div class="col-md-7">
+      <p>🎓I am Uppunuti Siddhartha, a dedicated Software Developer with a strong foundation in full-stack web
+        development. I hold a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering from
+        AVN Institute of Engineering and Technology (AVNIET). </p>
+      <p>🛠️ As a Python Full Stack Developer,: I specialize in building dynamic web applications using HTML, CSS,
+        JavaScript, Django, and SQL, combining responsive front-end design with robust back-end functionality
+        and efficient database management.</p>
+      <p>💼 I have successfully completed internships in Python Full Stack Development, focusing on technologies
+        like Django, HTML, CSS, React.js, and APIs. My key academic project, "Autism Detection Using Machine
+        Learning," demonstrates my interest in combining technology with real-world problem-solving.</p>
+      <p>🚀 In addition to my academic achievements, I actively enhance my skills through coding challenges on
+        platforms like LeetCode, and contribute to collaborative projects on GitHub. I’m passionate about
+        continuous learning, clean code, and building impactful digital solutions.
+      </p>
     </div>
-    <div class="row">
-        <div class="col-md-5">
-            <h1 class="skill">Building <span> with These➔</span></h1>
-            <p>"Building with the Best! 🚀💡 From Python to React, REST APIs to AWS-crafting seamless digital
-                experiences with powerful tools! strong"</p>
-        </div>
-        <div class="col-md-7">
-            <div class="main-container ">
-                <div class="badge-container">
-                    <span class="badge python"><i class="fab fa-python"></i> Python</span>
-                    <span class="badge django"><i class="fas fa-leaf"></i> Django</span>
-                    <span class="badge restapi"><i class="fas fa-plug"></i> REST API</span>
-                    <span class="badge html"><i class="fab fa-html5"></i> HTML5</span>
-                    <span class="badge css"><i class="fab fa-css3-alt"></i> CSS3</span>
-                    <span class="badge js"><i class="fab fa-js"></i> JavaScript</span>
-                    <span class="badge react"><i class="fab fa-react"></i> React.js</span>
-                    <span class="badge git"><i class="fab fa-git-alt"></i> Git</span>
-                    <span class="badge github"><i class="fab fa-github"></i> GitHub</span>
-                    <span class="badge postgres"><i class="fas fa-database"></i> PostgreSQL</span>
-                    <span class="badge mysql"><i class="fas fa-database"></i> MySQL</span>
-                    <span class="badge sqlite"><i class="fas fa-database"></i> SQLite</span>
-                    <span class="badge docker"><i class="fab fa-docker"></i> Docker</span>
-                    <span class="badge vercel"><i class="fas fa-cloud-upload-alt"></i> Vercel</span>
-                    <span class="badge heroku"><i class="fab fa-heroku"></i> Heroku</span>
-                    <span class="badge aws"><i class="fab fa-aws"></i> AWS</span>
+  </div>
+  <div class="container">
+    <div class="certificate">
+      <div class="num">
+        4+
+      </div>
+      <div class="title">
+        Certifications
+      </div>
+    </div>
+    <div class="certificate">
+      <div class="num">
+        7+
+      </div>
+      <div class="title">
+        Projects
+      </div>
+    </div>
+    <div class="certificate">
+      <div class="num">
+        2+
+      </div>
+      <div class="title">
+        Achievements
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <h1 class="skill">Building <span> with These➔</span></h1>
+      <p>"Building with the Best! 🚀💡 From Python to React, REST APIs to AWS-crafting seamless digital
+        experiences with powerful tools! strong"</p>
+    </div>
+    <div class="col-md-7">
+      <div class="main-container ">
+        <div class="badge-container">
+          <span class="badge python"><i class="fab fa-python"></i> Python</span>
+          <span class="badge django"><i class="fas fa-leaf"></i> Django</span>
+          <span class="badge restapi"><i class="fas fa-plug"></i> REST API</span>
+          <span class="badge html"><i class="fab fa-html5"></i> HTML5</span>
+          <span class="badge css"><i class="fab fa-css3-alt"></i> CSS3</span>
+          <span class="badge js"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="badge react"><i class="fab fa-react"></i> React.js</span>
+          <span class="badge git"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="badge github"><i class="fab fa-github"></i> GitHub</span>
+          <span class="badge postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+          <span class="badge mysql"><i class="fas fa-database"></i> MySQL</span>
+          <span class="badge sqlite"><i class="fas fa-database"></i> SQLite</span>
+          <span class="badge docker"><i class="fab fa-docker"></i> Docker</span>
+          <span class="badge vercel"><i class="fas fa-cloud-upload-alt"></i> Vercel</span>
+          <span class="badge heroku"><i class="fab fa-heroku"></i> Heroku</span>
+          <span class="badge aws"><i class="fab fa-aws"></i> AWS</span>
 
-                    <span class="badge bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                    <span class="badge tailwind"><i class="fas fa-wind"></i> Tailwind CSS</span>
-                    <span class="badge api"><i class="fas fa-code"></i> API Integration</span>
-                </div>
-            </div>
+          <span class="badge bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+          <span class="badge tailwind"><i class="fas fa-wind"></i> Tailwind CSS</span>
+          <span class="badge api"><i class="fas fa-code"></i> API Integration</span>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section id="project">
-    <div class="row">
+  <div class="row">
 
-        <div class="col-md-6">
-            <h1>Project <span>Gallery</span></h1>
-            <div>
-                <div class="project-title" id="title"
-                    data-img="https://img.freepik.com/premium-photo/autism-spectrum-disorder_1173361-342.jpg?w=2000">
-                    DETECTION OF AUTISM SPECTRUM DISORDER➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Flask, Machine Learing</h6>
-                    <p>This project uses Machine Learning algorithms to <strong>detect Autism Spectrum Disorder
-                            (ASD)</strong> based on behavioral and social patterns.
-                        It analyzes data gathered from questionnaires and provides early diagnosis suggestions, helping
-                        in timely intervention.
-                    </p>
-                    <div class="icons">
-                        <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
-                            target="_blank"> <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="project-title" id="title"
-                    data-img="https://th.bing.com/th/id/R.bab74667eb16b4c685c0675251df14e9?rik=oQZsjI8flW5l1Q&riu=http%3a%2f%2fgovernmenttechnologyinsider.com%2fwp-content%2fuploads%2f2019%2f04%2fshutterstock_445417840-copy.jpg&ehk=9CJAAQSXItNzqHZGKFT1f8WldaG5zyP%2f2PQoQDl6Iaw%3d&risl=&pid=ImgRaw&r=0">
-                    Network Cyber Attack Detention➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Flask, Machine Learing</h6>
-                    <p>Implemented a system to monitor network traffic and identify malicious activities using machine
-                        learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
-                        phishing, and intrusion attempts in real-time, ensuring network security and preventing
-                        potential breaches</p>
-                    <div class="icons">
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/uppunutisiddhartha/Detection-of-Autism-Spectrum-Disorder-ASD-Using-Machine-Learning-Techniques"
-                                target="_blank"> <i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="project-title" id="title" data-img="assets/ebook.jpg">
-                    E.Book Communuty➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
-                    <p>E.Book Community is a collaborative platform designed for students and educators to share, read,
-                        and contribute educational notes and resources. The platform allows users to upload their notes,
-                        access study materials, and engage in knowledge sharing, fostering a supportive learning
-                        environment. It also includes features like user registration, feedback system, and
-                        administrative controls for content approval</p>
-                    <div class="icons">
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/uppunutisiddhartha/ebook" target="_blank"> <i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="project-title" id="title" data-img="https://cdn.wallpapersafari.com/27/74/LtxYZa.jpg">
-                    WeatherLive➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
-                    <p>Implemented a system to monitor network traffic and identify malicious activities using machine
-                        learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
-                        phishing, and intrusion attempts in real-time, ensuring network security and preventing
-                        potential breaches</p>
-                    <div class="icons">
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/1741867079579/single-media-viewer/?profileId=ACoAAFUKazYBlmeHOIwikO-7hTt0q8295CsqdDE"
-                                target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/uppunutisiddhartha/weatherapp-_using-Django" target="_blank"> <i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="project-title" id="title" data-img="https://wallpaperaccess.com/full/4574942.jpg">Expense
-                    trackor➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
-                    <p>Implemented a system to monitor network traffic and identify malicious activities using machine
-                        learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
-                        phishing, and intrusion attempts in real-time, ensuring network security and preventing
-                        potential breaches</p>
-
-                    <div class="icons">
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/1741674631820/single-media-viewer/?profileId=ACoAAFUKazYBlmOIwikO-7hTt0q8295CsqdDeHE"
-                                target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/uppunutisiddhartha/Expense-Tracker" target="_blank"> <i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="project-title" id="title" data-img="https://i.ytimg.com/vi/TCeIu8hxurw/hqdefault.jpg">
-                    currency-converter➔
-                </div>
-                <div class="project-desc">
-                    <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
-                    <p>Implemented a system to monitor network traffic and identify malicious activities using machine
-                        learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
-                        phishing, and intrusion attempts in real-time, ensuring network security and preventing
-                        potential breaches</p>
-                    <div class="icons">
-                        <div class="icons">
-                            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/uppunutisiddhartha/currency-converter" target="_blank"> <i
-                                    class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <div class="col-md-6">
+      <h1>Project <span>Gallery</span></h1>
+      <div>
+        <div class="project-title" id="title"
+          data-img="https://img.freepik.com/premium-photo/autism-spectrum-disorder_1173361-342.jpg?w=2000">
+          DETECTION OF AUTISM SPECTRUM DISORDER➔
         </div>
-
-
-        <div class="col-md-6 text-center">
-            <img id="project-img" src="" alt="Project Image">
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Flask, Machine Learing</h6>
+          <p>This project uses Machine Learning algorithms to <strong>detect Autism Spectrum Disorder
+              (ASD)</strong> based on behavioral and social patterns.
+            It analyzes data gathered from questionnaires and provides early diagnosis suggestions, helping
+            in timely intervention.
+          </p>
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
+              target="_blank"> <i class="fab fa-github"></i></a>
+          </div>
         </div>
+      </div>
+
+      <div>
+        <div class="project-title" id="title"
+          data-img="https://th.bing.com/th/id/R.bab74667eb16b4c685c0675251df14e9?rik=oQZsjI8flW5l1Q&riu=http%3a%2f%2fgovernmenttechnologyinsider.com%2fwp-content%2fuploads%2f2019%2f04%2fshutterstock_445417840-copy.jpg&ehk=9CJAAQSXItNzqHZGKFT1f8WldaG5zyP%2f2PQoQDl6Iaw%3d&risl=&pid=ImgRaw&r=0">
+          Network Cyber Attack Detention➔
+        </div>
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Flask, Machine Learing</h6>
+          <p>Implemented a system to monitor network traffic and identify malicious activities using machine
+            learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
+            phishing, and intrusion attempts in real-time, ensuring network security and preventing
+            potential breaches</p>
+          <div class="icons">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/uppunutisiddhartha/Detection-of-Autism-Spectrum-Disorder-ASD-Using-Machine-Learning-Techniques"
+                target="_blank"> <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="project-title" id="title" data-img="assets/ebook.jpg">
+          E.Book Communuty➔
+        </div>
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
+          <p>E.Book Community is a collaborative platform designed for students and educators to share, read,
+            and contribute educational notes and resources. The platform allows users to upload their notes,
+            access study materials, and engage in knowledge sharing, fostering a supportive learning
+            environment. It also includes features like user registration, feedback system, and
+            administrative controls for content approval</p>
+          <div class="icons">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/uppunutisiddhartha/ebook" target="_blank"> <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-title" id="title" data-img="https://cdn.wallpapersafari.com/27/74/LtxYZa.jpg">
+          WeatherLive➔
+        </div>
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
+          <p>Implemented a system to monitor network traffic and identify malicious activities using machine
+            learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
+            phishing, and intrusion attempts in real-time, ensuring network security and preventing
+            potential breaches</p>
+          <div class="icons">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/siddhartha55/details/projects/1741867079579/single-media-viewer/?profileId=ACoAAFUKazYBlmeHOIwikO-7hTt0q8295CsqdDE"
+                target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/uppunutisiddhartha/weatherapp-_using-Django" target="_blank"> <i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-title" id="title" data-img="https://wallpaperaccess.com/full/4574942.jpg">Expense
+          trackor➔
+        </div>
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
+          <p>Implemented a system to monitor network traffic and identify malicious activities using machine
+            learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
+            phishing, and intrusion attempts in real-time, ensuring network security and preventing
+            potential breaches</p>
+
+          <div class="icons">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/siddhartha55/details/projects/1741674631820/single-media-viewer/?profileId=ACoAAFUKazYBlmOIwikO-7hTt0q8295CsqdDeHE"
+                target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/uppunutisiddhartha/Expense-Tracker" target="_blank"> <i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-title" id="title" data-img="https://i.ytimg.com/vi/TCeIu8hxurw/hqdefault.jpg">
+          currency-converter➔
+        </div>
+        <div class="project-desc">
+          <h6><span>Selected Tech: </span>Python Full Stack, Django</h6>
+          <p>Implemented a system to monitor network traffic and identify malicious activities using machine
+            learning techniques. The project focuses on detecting common cyber attacks such as DDoS,
+            phishing, and intrusion attempts in real-time, ensuring network security and preventing
+            potential breaches</p>
+          <div class="icons">
+            <div class="icons">
+              <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/uppunutisiddhartha/currency-converter" target="_blank"> <i
+                  class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <a href="https://github.com/uppunutisiddhartha"><button class="btn">
-            View More <i class="fas fa-arrow-right"></i>
-        </button></a>
+
+
+    <div class="col-md-6 text-center">
+      <img id="project-img" src="" alt="Project Image">
+    </div>
+  </div>
+  <a href="https://github.com/uppunutisiddhartha"><button class="btn">
+      View More <i class="fas fa-arrow-right"></i>
+    </button></a>
 </section>
 <section id="highlights">
-    <div class="explore">
-        <div class="row">
-            <div class="col-md-5">
-                <h1>Show<span>case</span></h1>
-                <p>Showcasing impactful projects, technical achievements, and events that shaped my journey as a Python
-                    Full Stack Developer.</p>
-            </div>
-            <div class="col-md-7">
-                <div class="cer">
-                    <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
-                    <div class="expo">
-                        <h4>🚀7+</h4>
-                        <a href="projects.html">
-                            <h5>Projects Developed</h5>
-                        </a>
-                    </div>
-                    <div class="para">
-                        <p>Developed over 7 projects, including web applications, machine learning models, and
-                            full-stack solutions. These projects showcase expertise in Python, Django, React.js, and
-                            problem-solving skills.</p>
-                    </div>
-                </div>
-
-                <div class="cer">
-                    <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
-                    <div class="expo">
-                        <h4>🎓4+</h4>
-                        <a href="certificate.html">
-                            <h5>Certifications in Python</h5>
-                        </a>
-                    </div>
-                    <div class="para">
-                        <p>Completed multiple Python certifications covering Full Stack Development, Web Development
-                            with Django, and Advanced Python programming. Proficient in building real-world projects and
-                            applying best coding practices.</p>
-                    </div>
-                </div>
-
-                <div class="cer">
-                    <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
-                    <div class="expo">
-                        <h4>🔗2+</h4>
-                        <h5>Tech-Events & Hackathons</h5>
-                    </div>
-                    <div class="para">
-                        <p>Participated in various tech events and hackathons, collaborating with teams to solve
-                            real-world problems, enhance coding skills, and learn emerging technologies.</p>
-                    </div>
-                </div>
-            </div>
-
+  <div class="explore">
+    <div class="row">
+      <div class="col-md-5">
+        <h1>Show<span>case</span></h1>
+        <p>Showcasing impactful projects, technical achievements, and events that shaped my journey as a Python
+          Full Stack Developer.</p>
+      </div>
+      <div class="col-md-7">
+        <div class="cer">
+          <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
+          <div class="expo">
+            <h4>🚀7+</h4>
+            <a href="projects.html">
+              <h5>Projects Developed</h5>
+            </a>
+          </div>
+          <div class="para">
+            <p>Developed over 7 projects, including web applications, machine learning models, and
+              full-stack solutions. These projects showcase expertise in Python, Django, React.js, and
+              problem-solving skills.</p>
+          </div>
         </div>
+
+        <div class="cer">
+          <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
+          <div class="expo">
+            <h4>🎓4+</h4>
+            <a href="certificate.html">
+              <h5>Certifications in Python</h5>
+            </a>
+          </div>
+          <div class="para">
+            <p>Completed multiple Python certifications covering Full Stack Development, Web Development
+              with Django, and Advanced Python programming. Proficient in building real-world projects and
+              applying best coding practices.</p>
+          </div>
+        </div>
+
+        <div class="cer">
+          <div class="cer" data-aos="fade-up" data-aos-duration="1000"></div>
+          <div class="expo">
+            <h4>🔗2+</h4>
+            <h5>Tech-Events & Hackathons</h5>
+          </div>
+          <div class="para">
+            <p>Participated in various tech events and hackathons, collaborating with teams to solve
+              real-world problems, enhance coding skills, and learn emerging technologies.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
 </section>
 <section id="contact">
-    <h1>Get in <span>Touch</span></h1>
-    <div class="row">
-        <div class="col-md-6">
+  <h1>Get in <span>Touch</span></h1>
+  <div class="row">
+    <div class="col-md-6">
 
-            <div class="contact-info">
-                <h3>Let's Talk</h3>
-                <h6>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                    vision. Feel free to reach out!</h6>
-                <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
-                <p><i class="fas fa-envelope"></i> <a
-                        href="mailto:uppunutisiddhartha@gmail.com">uppunutisiddhartha@gmail.com</a></p>
+      <div class="contact-info">
+        <h3>Let's Talk</h3>
+        <h6>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+          vision. Feel free to reach out!</h6>
+        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+        <p><i class="fas fa-envelope"></i> <a
+            href="mailto:uppunutisiddhartha@gmail.com">uppunutisiddhartha@gmail.com</a></p>
 
-                <p><i class="fas fa-phone"></i> +91 9030425546</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/uppunutisiddhartha" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://x.com/siddhartha24907" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+        <p><i class="fas fa-phone"></i> +91 9030425546</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/uppunutisiddhartha" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/siddhartha24907" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-        <div class="col-md-6">
-
-            <form action="{% url 'contact' %}" method="POST" id="contactForm" class="contact-form">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Enter your message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-            
-          
-           
-            
-        </div>
+      </div>
     </div>
+    <div class="col-md-6">
+
+      <form action="{% url 'contact' %}" method="POST" id="contactForm" class="contact-form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" name="message" id="message" rows="5" placeholder="Enter your message"
+            required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+
+
+
+
+    </div>
+  </div>
 </section>
 <footer id="section">
-    <div class="footer-content">
-        <div class="footer-info">
-            <h3>Uppunuti Siddhartha</h3>
-            <p>Python Full Stack Developer | Django | Web Developer | CSE Graduate</p>
-        </div>
-
-        <div class="footer-links">
-            <a href="mailto:uppunutisiddhartha@gmail.com" class="footer-link">
-                <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="https://github.com/uppunutisiddhartha" target="_blank" class="footer-link">
-                <i class="fab fa-github"></i>GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank" class="footer-link">
-                <i class="fab fa-linkedin"></i>LinkedIn
-            </a>
-            <a href="https://siddhartha-portifolio.vercel.app/contact.html" target="_blank" class="footer-link">
-                <i class="fa-solid fa-link"></i>Contact
-            </a>
-        </div>
+  <div class="footer-content">
+    <div class="footer-info">
+      <h3>Uppunuti Siddhartha</h3>
+      <p>Python Full Stack Developer | Django | Web Developer | CSE Graduate</p>
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2025 Uppunuti Siddhartha. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:uppunutisiddhartha@gmail.com" class="footer-link">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://github.com/uppunutisiddhartha" target="_blank" class="footer-link">
+        <i class="fab fa-github"></i>GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank" class="footer-link">
+        <i class="fab fa-linkedin"></i>LinkedIn
+      </a>
+      <a href="https://siddhartha-portifolio.vercel.app/contact.html" target="_blank" class="footer-link">
+        <i class="fa-solid fa-link"></i>Contact
+      </a>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Uppunuti Siddhartha. All rights reserved.</p>
+  </div>
 </footer>
 
 
 
 <script>
-    const titles = document.querySelectorAll('.project-title');
-    const descs = document.querySelectorAll('.project-desc');
-    const img = document.getElementById('project-img');
+  const titles = document.querySelectorAll('.project-title');
+  const descs = document.querySelectorAll('.project-desc');
+  const img = document.getElementById('project-img');
 
-    descs.forEach((desc, i) => {
-        if (i === 0) {
-            desc.style.display = 'block';
-            img.style.display = 'block';
-            img.src = titles[i].getAttribute('data-img');
-            titles[i].classList.add('active');
-        } else {
-            desc.style.display = 'none';
-        }
+  descs.forEach((desc, i) => {
+    if (i === 0) {
+      desc.style.display = 'block';
+      img.style.display = 'block';
+      img.src = titles[i].getAttribute('data-img');
+      titles[i].classList.add('active');
+    } else {
+      desc.style.display = 'none';
+    }
+  });
+
+  titles.forEach((title, index) => {
+    title.addEventListener('click', () => {
+      descs.forEach((desc, i) => {
+        if (i !== index) desc.style.display = 'none';
+      });
+
+      const desc = descs[index];
+      const isVisible = desc.style.display === 'block';
+      desc.style.display = isVisible ? 'none' : 'block';
+
+      if (!isVisible) {
+        img.style.display = 'block';
+        img.src = title.getAttribute('data-img');
+      } else {
+        img.style.display = 'none';
+      }
     });
+  });
+  AOS.init({
+    once: true,
+  });
 
-    titles.forEach((title, index) => {
-        title.addEventListener('click', () => {
-            descs.forEach((desc, i) => {
-                if (i !== index) desc.style.display = 'none';
-            });
 
-            const desc = descs[index];
-            const isVisible = desc.style.display === 'block';
-            desc.style.display = isVisible ? 'none' : 'block';
-
-            if (!isVisible) {
-                img.style.display = 'block';
-                img.src = title.getAttribute('data-img');
-            } else {
-                img.style.display = 'none';
-            }
-        });
-    });
-    AOS.init({
-        once: true,
-    });
-
-    
-    var typed = new Typed("#typing-text", {
-        strings: ["Python Full Stack Developer", "Web Developer"], // Text to type
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 1000,
-        loop: true
-    });
+  var typed = new Typed("#typing-text", {
+    strings: ["Python Full Stack Developer", "Web Developer"], // Text to type
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true
+  });
   document.addEventListener("DOMContentLoaded", function () {
     let badges = document.querySelectorAll(".badge");
 
     let observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                let badge = entry.target;
-                setTimeout(() => {
-                    badge.style.opacity = "1";
-                    badge.style.transform = "translateY(0)";
-                }, index * 200); // Adjust the delay for smooth effect
-            } else {
-                // Reset animation when element goes out of view
-                entry.target.style.opacity = "0";
-                entry.target.style.transform = "translateY(20px)";
-            }
-        });
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          let badge = entry.target;
+          setTimeout(() => {
+            badge.style.opacity = "1";
+            badge.style.transform = "translateY(0)";
+          }, index * 200); // Adjust the delay for smooth effect
+        } else {
+          // Reset animation when element goes out of view
+          entry.target.style.opacity = "0";
+          entry.target.style.transform = "translateY(20px)";
+        }
+      });
     }, { threshold: 0.2 }); // 20% visibility to trigger
 
     badges.forEach(badge => {
-        observer.observe(badge);
+      observer.observe(badge);
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
+  });
+  document.addEventListener("DOMContentLoaded", function () {
     let stats = document.querySelectorAll(".certificate");
 
     let observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                let stat = entry.target;
-                setTimeout(() => {
-                    stat.style.opacity = "1";
-                    stat.style.transform = "translateY(0)";
-                }, index * 200); // Delayed effect for a smooth appearance
-            } else {
-                // Reset when out of view
-                entry.target.style.opacity = "0";
-                entry.target.style.transform = "translateY(30px)";
-            }
-        });
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          let stat = entry.target;
+          setTimeout(() => {
+            stat.style.opacity = "1";
+            stat.style.transform = "translateY(0)";
+          }, index * 200); // Delayed effect for a smooth appearance
+        } else {
+          // Reset when out of view
+          entry.target.style.opacity = "0";
+          entry.target.style.transform = "translateY(30px)";
+        }
+      });
     }, { threshold: 0.5 }); // 50% visibility before animation
 
     stats.forEach(stat => {
-        observer.observe(stat);
+      observer.observe(stat);
     });
-});
+  });
 
 
 
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-    crossorigin="anonymous"></script>
+  integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 
 </html>
