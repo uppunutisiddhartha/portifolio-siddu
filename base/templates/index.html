@@ -88,7 +88,7 @@
   nav ul li::after {
     content: '';
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
     width: 70%;
@@ -96,12 +96,15 @@
     background-color: #fbfffd;
     transition: transform 0.3s ease;
   }
-
+  .menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
   nav ul li:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
 
-  /* Home Section */
   .home {
     padding: 0px 20px 50px;
   }
@@ -839,7 +842,41 @@
     nav ul {
       justify-content: center;
     }
+    nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
 
+  .menu-toggle {
+    display: block;
+    margin-left: auto; 
+    font-size: 28px;
+  color: #f5ecec;
+  cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.95);
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50%;
+    height: 600px; 
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+   
+   margin-bottom: 100px;
+  }
     .reverse-on-mobile {
       flex-direction: column-reverse;
     }
@@ -874,7 +911,7 @@
     }
 
     .container {
-      flex-direction: column;
+      flex-direction:row;
     }
 
     .certificate {
@@ -914,7 +951,7 @@
     }
 #about .row p{
   text-align: justify;
-    word-spacing: -1px;
+    word-spacing: 0px;
     max-width: 95%;
     margin: 10px auto;
     line-height: normal;
@@ -949,6 +986,7 @@
       width: 80%;
       line-height: 1;
       font-size: 2.0rem;
+      text-align: center;
     }
 
     #contact h1 {
@@ -957,7 +995,8 @@
     }
     #project h1{
       width: 100%;
-      font-size: 2.5rem;
+      font-size: 4.5rem;
+  
     }
     .main p {
       text-align: justify;
@@ -1034,7 +1073,9 @@
       font-size: 12px;
       padding: 6px 10px;
     }
-
+.badge-container{
+  margin-top: 50px;
+}
     .certificates-container {
       display: flex;
       justify-content: center;
@@ -1074,25 +1115,20 @@
       width: 100%;
     }
   }
-
-
-  .fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
 </style>
 <div class="section">
 
   <body>
     <nav>
-      <ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#project">Projects</a></li>
         <li><a href="#highlights">Explore</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    
     <div class="home">
       <section id="home">
         <div class="container">
@@ -1667,6 +1703,33 @@
 
   document.querySelectorAll('.cer').forEach(cer => {
     observer.observe(cer);
+  });
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const menuIcon = document.getElementById('menu-icon');
+
+  // Toggle the menu on click
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent the click from propagating to document
+    navLinks.classList.toggle('show');
+    menuIcon.innerHTML = navLinks.classList.contains('show') ? '&times;' : '&#9776;';
+  });
+
+  // Close the menu if clicking outside of the nav or menu toggle
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
+      navLinks.classList.remove('show');
+      menuIcon.innerHTML = '&#9776;';
+    }
+  });
+
+  // Optional: Close menu when a nav item is clicked
+  const links = navLinks.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      menuIcon.innerHTML = '&#9776;';
+    });
   });
 </script>
 
