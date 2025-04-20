@@ -138,6 +138,7 @@
   .main h5 {
     font-size: 1.5rem;
     color: #00b4d8;
+    text-align: left;
     margin-bottom: 0.5rem;
   }
 
@@ -859,18 +860,23 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(34, 34, 34, 0.95);
+    background-color: rgba(45, 44, 44, 0.95);
     position: absolute;
     top: 0px;
     right: 0;
     width: 50%;
-    height: 600px; 
+    height: 800px; 
     padding: 15px 0;
     backdrop-filter: blur(10px);
+    opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   nav ul.show {
     display: flex;
+    opacity: 1; 
+  transform: translateX(0);
   }
 
   nav ul li {
@@ -1121,6 +1127,7 @@
   <body>
     <nav>
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      
       <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#project">Projects</a></li>
@@ -1144,17 +1151,17 @@
                   offer seamless user experiences, solve real-world problems, and maintain clean, scalable code for
                   long-term success.</p>
                 <div class="social">
-                  <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                  <a href="https://www.linkedin.com/in/siddhartha55/" target="_blank">
                     <i class="fab fa-linkedin"></i>
                   </a>
-                  <a href="https://github.com/your-username" target="_blank">
+                  <a href="https://github.com/uppunutisiddhartha" target="_blank">
                     <i class="fab fa-github"></i>
                   </a>
                   <a href="mailto:uppunutisiddhartha@gmail.com">
                     <i class="fas fa-envelope"></i>
                   </a>
                 </div>
-                <a href="#" download class="btn btn-primary">
+                <a href="https://drive.google.com/file/d/1kL0SCtQOvvzDAFArhf1eTBQnx37yXSnE/view?usp=drive_link" download class="btn btn-primary">
                   <i class="fas fa-download"></i> Download
                 </a>
               </div>
@@ -1342,7 +1349,6 @@
             phishing, and intrusion attempts in real-time, ensuring network security and preventing
             potential breaches</p>
           <div class="icons">
-            <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
             <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
@@ -1373,7 +1379,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
+            <a href="https://github.com/uppunutisiddhartha/ebook"
               target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
@@ -1399,11 +1405,11 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
+            <a href="https://github.com/uppunutisiddhartha/weatherapp-_using-Django"
               target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
-            <a href="https://your-cloud-deployment-link.com" target="_blank" class="icon cloud">
+            <a href="https://weatherapp-using-django.onrender.com/" target="_blank" class="icon cloud">
               <i class="fas fa-cloud"></i><span>Cloud</span>
             </a>
           </div>
@@ -1426,7 +1432,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
+            <a href="https://github.com/uppunutisiddhartha/Expense-Tracker"
               target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
@@ -1451,7 +1457,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
+            <a href="https://github.com/uppunutisiddhartha/currency-converter"
               target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
