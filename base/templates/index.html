@@ -596,15 +596,17 @@
   }
 
   .cer.animate {
-  animation: slideInRight 0.8s ease forwards;
-}
-
-@keyframes slideInRight {
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    animation: slideInRight 0.8s ease forwards;
   }
-}.cer::before {
+
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .cer::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -763,11 +765,11 @@
     box-shadow: 0 0 0 0.2rem rgba(0, 180, 216, 0.25);
   }
 
-  /* Footer */
+
   footer {
     background-color: #0f2027;
     border-top: 2px solid #6d435a;
-    padding: 30px 20px;
+    padding: 20px 10px;
     text-align: center;
   }
 
@@ -778,14 +780,14 @@
 
   footer p {
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .footer-links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
   }
 
@@ -799,7 +801,7 @@
   }
 
   .footer-link i {
-    margin-right: 8px;
+    margin-right: 5px;
   }
 
   .footer-link:hover {
@@ -862,13 +864,13 @@
     }
 
     #About1 h1,
-    #project h1,
+
     #highlights h1,
-    #contact h1,
     .skill {
-      font-size: 2rem;
-      text-align:start;
-     
+      font-size: 3.5rem;
+      text-align: start;
+      margin-left: 0px;
+      width: 100px;
     }
 
     .container {
@@ -910,9 +912,15 @@
       padding: 0;
       overflow-x: hidden;
     }
+#about .row p{
+  text-align: justify;
+    word-spacing: -1px;
+    max-width: 95%;
+    margin: 10px auto;
+    line-height: normal;
+}
 
 
-   
     .container {
       width: 100%;
       max-width: 100%;
@@ -934,10 +942,23 @@
       margin-top: -120px;
       text-align: center;
     }
-.skill{
-  width: 100px;
-  text-align:start;
-}
+
+    .skill
+    {
+      display: inline-block;
+      width: 80%;
+      line-height: 1;
+      font-size: 2.0rem;
+    }
+
+    #contact h1 {
+      width: 100%;
+      font-size: 2.5rem;
+    }
+    #project h1{
+      width: 100%;
+      font-size: 2.5rem;
+    }
     .main p {
       text-align: justify;
       word-wrap: normal;
@@ -981,11 +1002,14 @@
       font-size: 1.2rem;
     }
 
+    #project h1 {
+      font-size: 2.0rem;
+      display: block;
+    }
+
     #About1 h1,
-    #project h1,
-    #highlights h1,
-    #contact h1,
-    .skill {
+    #highlights h1
+   {
       font-size: 3.8rem;
     }
 
@@ -996,13 +1020,16 @@
     .expo h5 {
       font-size: 1.1rem;
     }
-.contact-info{
-  margin: 0px;
-  padding: 10px;
-}
-.contact-info h6{
-  margin-left: 0px;
-}
+
+    .contact-info {
+      margin: 0px;
+      padding: 10px;
+    }
+
+    .contact-info h6 {
+      margin-left: 0px;
+    }
+
     .badge {
       font-size: 12px;
       padding: 6px 10px;
@@ -1119,6 +1146,7 @@
       <p>🎓I am Uppunuti Siddhartha, a dedicated Software Developer with a strong foundation in full-stack web
         development. I hold a Bachelor of Technology (B.Tech) degree in Computer Science and Engineering from
         AVN Institute of Engineering and Technology (AVNIET). </p>
+
       <p>🛠️ As a Python Full Stack Developer,: I specialize in building dynamic web applications using HTML, CSS,
         JavaScript, Django, and SQL, combining responsive front-end design with robust back-end functionality
         and efficient database management.</p>
