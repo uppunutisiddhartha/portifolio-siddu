@@ -96,11 +96,13 @@
     background-color: #fbfffd;
     transition: transform 0.3s ease;
   }
+
   .menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
   nav ul li:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
@@ -589,11 +591,13 @@
     transition: all 0.4s ease;
     border: 2px solid #00b4d8;
     width: 300px;
+    /* Control width */
     opacity: 0;
+    /* Set opacity to 1, no longer need animation */
     margin-top: 20px;
     box-shadow: 0 4px 12px rgba(0, 100, 216, 0.3);
-    transform: translateX(100%);
-    animation: slideInRight 0.8s ease forwards;
+    transform: translateX(0);
+    /* Set translate to 0, no sliding */
     position: relative;
     overflow: hidden;
     row-gap: -10px;
@@ -663,6 +667,10 @@
 
   .cer:nth-child(3) {
     animation-delay: 0.6s;
+  }
+
+  .cer:nth-child(4) {
+    animation-delay: 0.8s;
   }
 
   @keyframes slideInRight {
@@ -843,46 +851,48 @@
     nav ul {
       justify-content: center;
     }
+
     nav {
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
 
-  .menu-toggle {
-    display: block;
-    margin-left: auto; 
-    font-size: 28px;
-  color: #f5ecec;
-  cursor: pointer;
-  }
+    .menu-toggle {
+      display: block;
+      margin-left: auto;
+      font-size: 28px;
+      color: #f5ecec;
+      cursor: pointer;
+    }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(45, 44, 44, 0.95);
-    position: absolute;
-    top: 0px;
-    right: 0;
-    width: 50%;
-    height: 800px; 
-    padding: 15px 0;
-    backdrop-filter: blur(10px);
-    opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(45, 44, 44, 0.95);
+      position: absolute;
+      top: 0px;
+      right: 0;
+      width: 50%;
+      height: 800px;
+      padding: 15px 0;
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
-  nav ul.show {
-    display: flex;
-    opacity: 1; 
-  transform: translateX(0);
-  }
+    nav ul.show {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+    }
 
-  nav ul li {
-   
-   margin-bottom: 100px;
-  }
+    nav ul li {
+
+      margin-bottom: 100px;
+    }
+
     .reverse-on-mobile {
       flex-direction: column-reverse;
     }
@@ -890,6 +900,10 @@
     .col-md-6 {
       width: 100%;
       padding: 0;
+    }
+
+    .main h5 {
+      text-align: center;
     }
 
     .main h2 {
@@ -917,7 +931,7 @@
     }
 
     .container {
-      flex-direction:row;
+      flex-direction: row;
     }
 
     .certificate {
@@ -938,6 +952,13 @@
     .project-desc h6 {
       font-size: 1rem;
     }
+
+    .container {
+      justify-content: center;
+      /* Center the items on smaller screens */
+      gap: 5px;
+      /* Decrease gap on smaller screens */
+    }
   }
 
   @media (max-width: 576px) {
@@ -955,13 +976,14 @@
       padding: 0;
       overflow-x: hidden;
     }
-#about .row p{
-  text-align: justify;
-    word-spacing: 0px;
-    max-width: 95%;
-    margin: 10px auto;
-    line-height: normal;
-}
+
+    #about .row p {
+      text-align: justify;
+      word-spacing: 0px;
+      max-width: 95%;
+      margin: 10px auto;
+      line-height: normal;
+    }
 
 
     .container {
@@ -986,8 +1008,7 @@
       text-align: center;
     }
 
-    .skill
-    {
+    .skill {
       display: inline-block;
       width: 80%;
       line-height: 1;
@@ -999,11 +1020,13 @@
       width: 100%;
       font-size: 2.5rem;
     }
-    #project h1{
+
+    #project h1 {
       width: 100%;
       font-size: 4.5rem;
-  
+
     }
+
     .main p {
       text-align: justify;
       word-wrap: normal;
@@ -1053,8 +1076,7 @@
     }
 
     #About1 h1,
-    #highlights h1
-   {
+    #highlights h1 {
       font-size: 3.8rem;
     }
 
@@ -1077,11 +1099,13 @@
 
     .badge {
       font-size: 12px;
-      padding: 6px 10px;
+      padding: 10px 10px;
     }
-.badge-container{
-  margin-top: 50px;
-}
+
+    .badge-container {
+      margin-top: 20px;
+    }
+
     .certificates-container {
       display: flex;
       justify-content: center;
@@ -1095,10 +1119,6 @@
       flex: 1 1 calc(33.33% - 40px);
       border-radius: 2px;
       min-width: 200px;
-    }
-
-    .badge-container {
-      margin-top: -5px;
     }
 
     .certificate .num {
@@ -1127,7 +1147,7 @@
   <body>
     <nav>
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      
+
       <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#project">Projects</a></li>
@@ -1135,7 +1155,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    
+
     <div class="home">
       <section id="home">
         <div class="container">
@@ -1161,7 +1181,8 @@
                     <i class="fas fa-envelope"></i>
                   </a>
                 </div>
-                <a href="https://drive.google.com/file/d/1kL0SCtQOvvzDAFArhf1eTBQnx37yXSnE/view?usp=drive_link" download class="btn btn-primary">
+                <a href="https://drive.google.com/file/d/1kL0SCtQOvvzDAFArhf1eTBQnx37yXSnE/view?usp=drive_link" download
+                  class="btn btn-primary">
                   <i class="fas fa-download"></i> Download
                 </a>
               </div>
@@ -1279,10 +1300,19 @@
             <p>Built web apps, ML models & full-stack solutions.</p>
           </div>
         </div>
+        <div class="cer">
+          <div class="expo">
+            <h4>📦2+</h4>
+            <h5>Projects Deployed</h5>
+          </div>
+          <div class="para">
+            <p>Successfully deployed full-stack web apps and machine learning models.</p>
+          </div>
+        </div>
 
         <div class="cer">
           <div class="expo">
-            <h4>🎓4+</h4>
+            <h4>🗞️4+</h4>
             <h5>Certifications in Python</h5>
           </div>
           <div class="para">
@@ -1349,7 +1379,7 @@
             phishing, and intrusion attempts in real-time, ensuring network security and preventing
             potential breaches</p>
           <div class="icons">
-              <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
             <a href="https://github.com/uppunutisiddhartha/Detection-of-Cyber-Attack-in-Network-using-Machine-Learning-Techniques."
               target="_blank" class="icon github">
@@ -1379,8 +1409,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/ebook"
-              target="_blank" class="icon github">
+            <a href="https://github.com/uppunutisiddhartha/ebook" target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
             <a href="https://your-cloud-deployment-link.com" target="_blank" class="icon cloud">
@@ -1405,8 +1434,8 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/weatherapp-_using-Django"
-              target="_blank" class="icon github">
+            <a href="https://github.com/uppunutisiddhartha/weatherapp-_using-Django" target="_blank"
+              class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
             <a href="https://weatherapp-using-django.onrender.com/" target="_blank" class="icon cloud">
@@ -1432,8 +1461,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/Expense-Tracker"
-              target="_blank" class="icon github">
+            <a href="https://github.com/uppunutisiddhartha/Expense-Tracker" target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
             <a href="https://your-cloud-deployment-link.com" target="_blank" class="icon cloud">
@@ -1457,8 +1485,7 @@
             <a href="https://www.linkedin.com/in/siddhartha55/details/projects/" target="_blank" class="icon linkedin">
               <i class="fab fa-linkedin"></i><span>LinkedIn</span>
             </a>
-            <a href="https://github.com/uppunutisiddhartha/currency-converter"
-              target="_blank" class="icon github">
+            <a href="https://github.com/uppunutisiddhartha/currency-converter" target="_blank" class="icon github">
               <i class="fab fa-github"></i><span>GitHub</span>
             </a>
             <a href="https://your-cloud-deployment-link.com" target="_blank" class="icon cloud">
