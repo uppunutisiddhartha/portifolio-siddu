@@ -117,9 +117,15 @@
     align-items: center;
   }
 
+  .img-container {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
   .img-container img {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -127,14 +133,14 @@
     padding: 3px;
     margin: 0 auto;
     display: block;
-    margin-left: 150px;
+    margin-left: 50px;
   }
 
   .main {
     padding: 50px;
     text-align: left;
-    margin-left: -180px;
-    margin-top: 20px;
+    margin-left: -150px;
+    margin-top: 50px;
   }
 
   .main h5 {
@@ -152,7 +158,7 @@
 
   .main h2 {
     font-size: 28px;
-    line-height: 1.5;
+    line-height: 1.9;
     margin-bottom: 1rem;
     color: #e9ecef;
   }
@@ -163,13 +169,11 @@
   }
 
   .main p {
-    color: #adb5bd;
-    margin-bottom: -20px;
+    margin-bottom: -15px;
     font-size: 1rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     line-height: 1.6;
+    text-align: left;
   }
 
   .social {
@@ -910,17 +914,18 @@
       display: block;
       font-size: 30px;
     }
-
+     
     .img-container {
       margin-bottom: 30px;
     }
-
     .main {
       margin: 0;
       text-align: center;
     }
 
-    #About1 h1,
+    #About1 h1 {
+      text-align: center;
+    }
 
     #highlights h1,
     .skill {
@@ -930,20 +935,40 @@
       width: 100px;
     }
 
+<<<<<<< Updated upstream
     .container {
       flex-direction: row;
     }
 
+=======
+>>>>>>> Stashed changes
     .certificate {
-      border-right: none !important;
-      border-bottom: 2px solid rgb(230, 220, 220);
-      padding-bottom: 20px;
-      margin-bottom: 20px;
+      flex: 1 1 100%;
+
+
+      width: 50%;
+
+      margin: 0 auto;
+
+      text-align: center;
+
     }
 
-    .certificate:last-child {
-      border-bottom: none;
+    .certificate::after {
+      content: "";
+      display: block;
+      width: 80%;
+
+      margin: 10px auto;
+      border-bottom: 2px solid rgb(230, 220, 220);
+
     }
+
+    .container {
+      gap: -10px;
+      /* Reduced gap for mobile */
+    }
+
 
     .project-title {
       font-size: 1.1rem;
@@ -955,9 +980,23 @@
 
     .container {
       justify-content: center;
+<<<<<<< Updated upstream
       /* Center the items on smaller screens */
       gap: 5px;
       /* Decrease gap on smaller screens */
+=======
+
+      gap: 5px;
+
+    }
+
+    #about .row p {
+      text-align: justify;
+      word-spacing: 0px;
+      max-width: 100%;
+      margin: 10px auto;
+      line-height: normal;
+>>>>>>> Stashed changes
     }
   }
 
@@ -977,6 +1016,20 @@
       overflow-x: hidden;
     }
 
+<<<<<<< Updated upstream
+=======
+    #about {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .main p {
+      text-align: justify;
+      word-wrap: normal;
+      word-spacing: -1px;
+      font-size: 14px;
+    }
+>>>>>>> Stashed changes
     #about .row p {
       text-align: justify;
       word-spacing: 0px;
@@ -984,6 +1037,26 @@
       margin: 10px auto;
       line-height: normal;
     }
+<<<<<<< Updated upstream
+=======
+    #about h1 {
+      text-align: center;
+    }
+
+    #about .row {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    #about .row p {
+      text-align: justify;
+      word-wrap: normal;
+      word-spacing: 0px;
+      font-size: 14px;
+    }
+>>>>>>> Stashed changes
 
 
     .container {
@@ -1004,7 +1077,7 @@
     }
 
     .main {
-      margin-top: -120px;
+      margin-top: -310px;
       text-align: center;
     }
 
@@ -1033,7 +1106,6 @@
       word-spacing: -1px;
       font-size: 14px;
     }
-
     #project .row .col-md-6 {
       align-items: start;
     }
@@ -1160,7 +1232,7 @@
       <section id="home">
         <div class="container">
           <div class="row reverse-on-mobile">
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="main">
                 <h5>Hello, I'm</h5>
                 <h3>Uppunuti Siddhartha</h3>
@@ -1188,7 +1260,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="img-container text-center">
                 <img
                   src="https://res.cloudinary.com/db4ayioxs/image/upload/v1744566548/uploads/1744566547772-IMG_20240323_002245_11zon%20%281%29.jpg.png"
