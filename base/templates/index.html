@@ -864,6 +864,8 @@
     nav {
       justify-content: space-between;
       padding: 10px 20px;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .menu-toggle {
@@ -880,11 +882,12 @@
       align-items: center;
       background-color: rgba(45, 44, 44, 0.95);
       position: absolute;
-      top: 0px;
+      top: 60px;
       right: 0;
       width: 50%;
       height: 400px;
       padding: 15px 0;
+      backdrop-filter: blur(10px);
       opacity: 0;
       transform: translateX(100%);
       transition: opacity 0.3s ease, transform 0.3s ease;
@@ -896,11 +899,16 @@
       transform: translateX(0);
     }
 
-    nav ul li a {
+    nav ul li {
 
-      margin-bottom: 10px;
+      margin-bottom: 100px;
     }
-
+    nav ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
     .reverse-on-mobile {
       flex-direction: column-reverse;
     }
@@ -931,13 +939,11 @@
     #About1 h1 {
       text-align: center;
     }
-
     .explore {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
     #highlights h1,
     .skill {
       font-size: 3.5rem;
@@ -974,7 +980,7 @@
 
     .container {
       gap: -10px;
-
+      
     }
 
 
@@ -994,7 +1000,6 @@
       gap: 5px;
 
     }
-
     .img-container img {
       margin-bottom: 120px;
       width: 280px;
@@ -1031,7 +1036,6 @@
       word-wrap: normal;
       word-spacing: -1px;
       font-size: 14px;
-      padding: 0 45px;
     }
 
     #about h1 {
@@ -1136,7 +1140,6 @@
 
     .main h2 {
       font-size: 1.2rem;
-      padding: 0 32px;
     }
 
     #project h1 {
@@ -1148,11 +1151,9 @@
     #highlights h1 {
       font-size: 3.8rem;
     }
-
-    .cer {
+    .cer{
       margin-top: -10px;
     }
-
     .expo h4 {
       font-size: 1.8rem;
     }
@@ -1214,6 +1215,31 @@
       width: 100%;
     }
   }
+  @media (max-width: 404px){
+    .main p {
+      text-align: justify;
+      word-wrap: normal;
+      word-spacing: -1px;
+      font-size: 14px;
+      padding: 0 15px;
+      max-width: 500px;
+    }
+    .main {
+      margin-top: -310px;
+    }
+    .main h2 {
+      font-size: 1.2rem;
+      padding: 0 20px;
+    }
+    .img-container img {
+      margin-bottom: 120px;
+      width: 250px;
+      height: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
 </style>
 <div class="section">
 
