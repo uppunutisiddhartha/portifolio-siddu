@@ -465,7 +465,7 @@
     background-color: rgb(39, 38, 38);
     color: rgb(146, 135, 135);
     padding: 8px 10px;
-    border-radius: 5px;
+    border-radius: 25px;
     text-decoration: none;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -1499,7 +1499,7 @@
       </div>
 
       <div>
-        <div class="project-title" id="title" data-img="assets/ebook.jpg">
+        <div class="project-title" id="title" data-img="https://media-hosting.imagekit.io/35804181efdd43d7/ChatGPT%20Image%20Apr%2022,%202025,%2001_42_06%20PM.png?Expires=1839917593&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xK4qkcJDAVoPCTbSbdZXLZHOMkLetyTFLxqfJsln~WsL~NAaE3JlFYw5Ps4ooqc9Af7~EPgyvjYPY~52HUEPdfmyIyTg3o9DRtBKxjviyxE8JjQA5fgIDH8YfEUN6gBe6eSWp0RTuCYTBLWxG1Qy6VIhltxZ0g1B~yjEYzd5MuiC~g5VVW0UtKsehBZhLVIR39kqLU5co9nOrip-U1j4p7-pXTURd1Fbwx9aSQ9sE4tgLVsoH0jUu15LJLxkae58tk8S0UPkcKnMSG3IJ8d8bCVZKIDGeL5pd9BHNf9KzG259EkmzY9bHfF76LkDmO7jqeq2HQwAPXtxHb~abzGTjA__">
           E.Book Communuty➔
         </div>
         <div class="project-desc">
@@ -1657,6 +1657,15 @@
             required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
+        {% if messages %}
+      <div class="mt-3">
+        {% for message in messages %}
+          <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-danger{% endif %}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
       </form>
 
 

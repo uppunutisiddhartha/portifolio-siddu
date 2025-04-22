@@ -9,6 +9,7 @@ from django.contrib import messages
 def index(request):
     return render(request,"index.html")
 def succes(request):
+    name = request.POST.get('name') 
     return render(request,"succes.html")
 from django.core.mail import send_mail, BadHeaderError
 
@@ -54,7 +55,7 @@ def contact_view(request):
             print("EMAIL ERROR:", e)
             messages.error(request, "Something went wrong. Try again.")
 
-        return redirect("succes")
+        return redirect("index")
 
-    return render(request, "succes.html")
+    return render(request, "index.html")
 
