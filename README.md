@@ -13,10 +13,10 @@ Hi, I'm Uppunuti Siddhartha — a passionate Python Full Stack Developer from Ra
 
 💻 Tools: Git, GitHub, VS Code, Docker
 
-➡️ Live Site:  https://chatai-fnf2.onrender.com
+➡️ Live Site: https://siddharthadevportfolio.onrender.com
 
 
-Tech Stack: Python, Django, python full stack.
+
 
 📞 Contact
 📧 Email: uppunutisiddhartha@gmail.com
