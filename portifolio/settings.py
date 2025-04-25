@@ -134,3 +134,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'uppunutisiddhartha@gmail.com'  
 EMAIL_HOST_PASSWORD = 'xsux yxco xngq bcsu' 
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://portifolio.up.railway.app"
+]
