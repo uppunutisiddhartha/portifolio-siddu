@@ -5,15 +5,14 @@ Welcome to my personal portfolio! This project highlights my skills, projects, a
 Hi, I'm Uppunuti Siddhartha — a passionate Python Full Stack Developer from Rajanna Sircilla, currently based in Hyderabad. I specialize in web development with a strong focus on backend technologies like Django and Python.
 
 🚀 Tech Stack
-🌐 Frontend: HTML, CSS, JavaScript, React.js
+🌐 Frontend: HTML, CSS, JavaScript
 
-🔧 Backend: Python, Django, Web API
+🔧 Backend: Python, Django, Flask
 
 🗃️ Database: SQLite, PostgreSQL
 
-💻 Tools: Git, GitHub, VS Code, Docker
-
-➡️ Live Site: https://siddharthadevportfolio.onrender.com
+💻 Tools: Git, GitHub, VS Code
+➡️ Live Site: https://portifolio-siddu-1.onrender.com
 
 
 
