@@ -2,66 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thank You</title>
-
+  <title>Kelly Adams - Illustrator</title>
   <style>
     body {
-      background: linear-gradient(135deg, #2c3e50, #73b3dd);
-      color: white;
-      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", Geneva, Verdana, sans-serif;
-      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #20c997;
+    }
+
+    .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0;
-      padding: 0;
+      padding: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .btn {
+      padding: 10px 25px;
+      background-color: #20c997;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero-image {
+      flex: 1;
       text-align: center;
     }
 
-    .thank-you-box {
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      padding: 40px 60px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      max-width: 600px;
-      width: 90%;
-    }
-
-    .thank-you-box h1 {
-      font-size: 60px;
-      color: #07aaf6;
-      margin-bottom: 20px;
-    }
-
-    .thank-you-box p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    .thank-you-box a {
-      display: inline-block;
-      padding: 10px 25px;
-      background-color: #07aaf6;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: 0.3s ease;
-    }
-
-    .thank-you-box a:hover {
-      background-color: #298ab7;
-      transform: scale(1.05);
+    .hero-image img {
+      max-width: 90%;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="thank-you-box">
-    <p>Hello <span class="highlight">{{ name }}</span>,</p>
+  <header>
+    <div><strong>KELLY</strong></div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Resume</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <p>Thank you for visiting my portfolio and getting in touch. I’ll review your message and respond shortly.</p>
-    <a href="{% url 'index' %}">Back to Home</a>
-
-  </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Kelly Adams</h1>
+      <p>I'm a professional illustrator from San Francisco</p>
+      <a href="#" class="btn">ABOUT ME</a>
+    </div>
+    <div class="hero-image">
+      <img src="your-image-path.jpg" alt="Kelly Adams working">
+    </div>
+  </section>
 </body>
 </html>

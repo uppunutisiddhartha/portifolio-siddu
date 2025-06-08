@@ -136,6 +136,4 @@ EMAIL_HOST_USER = 'uppunutisiddhartha@gmail.com'
 EMAIL_HOST_PASSWORD = 'xsux yxco xngq bcsu' 
 
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://portifolio.up.railway.app"
-]
+
