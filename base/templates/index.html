@@ -1927,6 +1927,17 @@
       menuIcon.innerHTML = '&#9776;';
     });
   });
+   let entryTime = Date.now();
+
+    window.addEventListener('beforeunload', function () {
+        let exitTime = Date.now();
+        let timeSpent = Math.round((exitTime - entryTime) / 1000);  // seconds
+
+        navigator.sendBeacon('/track-visit/', JSON.stringify({
+            time_spent: timeSpent,
+            page_url: window.location.href
+        }));
+    });
 </script>
 
 

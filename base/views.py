@@ -3,7 +3,8 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.contrib import messages
-
+import json
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def index(request):
@@ -59,3 +60,27 @@ def contact_view(request):
 
     return render(request, "index.html")
 
+
+
+@csrf_exempt
+def track_visit(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            time_spent = data.get('time_spent', 0)
+            page_url = data.get('page_url', 'Unknown')
+
+            send_mail(
+                subject='New Portfolio Visit Alert',
+                message=f"Someone visited your portfolio!\nPage: {page_url}\nTime Spent: {time_spent} seconds",
+                from_email='uppunutisiddhartha@gmail.com',
+                recipient_list=['uppunutisiddhartha@gmail.com'],
+                fail_silently=False,
+            )
+
+            return HttpResponse("Tracked", status=200)
+        except Exception as e:
+            print("Tracking Error:", e)
+            return HttpResponse("Error", status=500)
+
+    return HttpResponse("Invalid request", status=400)
